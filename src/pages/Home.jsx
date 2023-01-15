@@ -1,8 +1,13 @@
 import React from 'react'
+import { ConstantWideLayout } from '../components'
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <div>
+      <ConstantWideLayout>
+        <h2>Home</h2>
+      </ConstantWideLayout>
+    </div>
   )
 }
 

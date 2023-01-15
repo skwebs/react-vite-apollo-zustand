@@ -1,24 +1,33 @@
-import { Route, Routes } from 'react-router-dom'
-import { PageNotFound } from './components'
-import Layout from './components/Layout'
-import { About, Contact, Home, User } from './pages'
+// import { Route, Routes } from 'react-router-dom'
+// import RootLayout from './components/RootLayout'
+// import { About, Contact, Home, User, PageNotFound } from './pages'
 
-function App() {
 
- 
+// function App() {
+//   return (
+//     <>
+//       <Routes>
+//         <Route element={<RootLayout />}>
+//           <Route index element={<Home />} />
+//           <Route path='/contact' element={<Contact />} />
+//           <Route path='/about' element={<About />} />
+//           <Route path='/user'>
+//             <Route index element={<User />} />
+//           </Route>
+//         </Route>
+//         <Route path='*' element={<PageNotFound />} />
+//       </Routes>
+//     </>
+//   )
+// }
 
+// export default App
+
+import React from 'react'
+
+const App = () => {
   return (
-    <>
-      <Routes>
-        <Route element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path='/contact' element={<Contact />} />
-          <Route path='/about' element={<About />} />
-          <Route path='/user' element={<User />} />
-        </Route>
-        <Route path='*' element={<PageNotFound />} />
-      </Routes>
-    </>
+    <div>App</div>
   )
 }
 

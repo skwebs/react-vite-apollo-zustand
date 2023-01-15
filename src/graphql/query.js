@@ -1,8 +1,8 @@
 import { gql } from "@apollo/client";
 
 const GET_USERS = gql`
- query GetUsers{
-  users(first:5){
+ query GetUsers($first:Int!){
+  users(first:$first){
     data{
       id
       name
@@ -21,19 +21,25 @@ const GET_USERS = gql`
       __typename
     }
   }
-}
-`;
+}`
 
 const GET_USER = gql`
-query  {
-  user(id:5) {
+query GetUser($id:ID){
+  user(id:$id){
     id
     name
     email
-    email_verified_at
-    __typename
   }
-}
-`;
+}`
 
-export { GET_USERS, GET_USER }
+
+const GET_TRASHED_USERS = gql`
+query GetTrashedUsers{
+  trashedUsers {
+    id
+    name
+    email
+  }
+}`
+
+export { GET_USERS, GET_USER, GET_TRASHED_USERS }

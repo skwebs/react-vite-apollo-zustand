@@ -1,11 +1,15 @@
 import React, { useState } from 'react'
-import { LoginModal } from '../components'
+import { ConstantWideLayout } from '../components'
+
 const About = () => {
 
     return (
         <>
-            <div>About</div>
-            {/* <LoginModal /> */}
+            <div>
+                <ConstantWideLayout>
+                    <h2>About</h2>
+                </ConstantWideLayout>
+            </div>
         </>
     )
 }
